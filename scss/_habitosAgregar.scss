@@ -1,0 +1,297 @@
+@import "bootstrap-reboot";
+@import "bootstrap";
+@import "bootstrap-grid";
+@import "habitosVariables";
+
+.container__titulo{
+    @extend .container;
+    @extend .col-lg-9;
+    @extend .mx-auto;
+    @extend .mb-4;
+    @extend .text-center;
+    font-family: $fuentePrincipal;
+}
+
+
+.form{
+    @extend .container;
+    @extend .col-lg-6;
+    @extend .mx-auto;
+
+    .form__accion{
+        @extend .form-group;
+        @extend .my-4;
+
+        .form__accion__label{
+            font-family: $fuentePrincipal;
+            font-size: 1.4rem;
+        }
+        .form__accion__input{
+            @extend .form-control;
+            @extend .col-lg-6;
+        }
+    }
+
+    .form__objetivo{
+        @extend .my-4;
+        .form__objetivo__p{
+            font-family: $fuentePrincipal;
+            font-size: 1.4rem;
+        }
+        .form__objetivo__grid{
+            @extend .row;
+
+            .form__objetivo__grid__col{
+                @extend .col-lg-3;
+
+                .form__objetivo__grid__col__input{
+                    @extend .form-control;
+                }
+                .form__objetivo__grid__col__p{
+                    @extend .text-center;
+                    font-family: $fuentePrincipal;
+                    font-size: 1.2rem;
+                }
+                .form__objetivo__grid__col__select{
+                    @extend .form-control;
+                }
+            }
+        }
+    }
+
+    .form__botones{
+        @extend .my-4;
+
+        .form__botones__guardar{
+            @extend .my-2;
+            @extend .mx-3;
+            @extend .my-sm-0;
+            @extend .py-1;
+            @extend .rounded;
+            background-color: $blanco;
+            border-width: 1px;
+            border-color: $naranjaPrincipal;
+            border-style: solid;
+            color: $naranjaPrincipal;  
+        }
+    
+        .form__botones__guardar:hover{
+            @extend .my-2;
+            @extend .mx-3;
+            @extend .my-sm-0;
+            @extend .py-1;
+            background-color: $naranjaPrincipal;
+            border-width: 1px;
+            border-color: $naranjaPrincipal;
+            color: $blanco;
+        }
+
+        .form__botones__cancelar{
+            @extend .my-2;
+            @extend .my-sm-0;
+            @extend .mx-3;
+            @extend .py-1;
+            @extend .rounded;
+            background-color: $blanco;
+            border-width: 1px;
+            border-color: $gris;
+            border-style: solid;
+            color: $gris;  
+        }
+        .form__botones__cancelar:hover{
+            @extend .my-2;
+            @extend .mx-3;
+            @extend .my-sm-0;
+            @extend .py-1;
+            background-color: $gris;
+            border-width: 1px;
+            border-color: $gris;
+            color: $blanco;
+        }
+    }
+
+    .form__colores{
+        .form__colores__p{
+            font-family: $fuentePrincipal;
+            font-size: 1.2rem;
+        }
+        .form__colores__previewColor{
+            @extend .col-lg-3;
+            @extend .rounded;
+            height: 25px;
+            box-shadow: 0px 4px 10px rgba(38, 38, 38, 0.2);
+        }
+
+        .form__colores__previewColor--default{
+            @extend .form__colores__previewColor;
+            background-color: $verde;
+        }
+
+        .form__colores__previewColor--verde{
+            @extend .form__colores__previewColor;
+            background-color: $verde;
+        }
+
+        .form__colores__previewColor--amarillo{
+            @extend .form__colores__previewColor;
+            background-color: $amarillo;
+        }
+        .form__colores__previewColor--naranja{
+            @extend .form__colores__previewColor;
+            background-color: $naranjaPrincipal;
+        }
+        .form__colores__previewColor--rojo{
+            @extend .form__colores__previewColor;
+            background-color: $rojo;
+        }
+        .form__colores__previewColor--celeste{
+            @extend .form__colores__previewColor;
+            background-color: $celeste;
+        }
+        .form__colores__previewColor--azul{
+            @extend .form__colores__previewColor;
+            background-color: $azul;
+        }
+        .form__colores__previewColor--violeta{
+            @extend .form__colores__previewColor;
+            background-color: $violeta;
+        }
+        .form__colores__previewColor--rosa{
+            @extend .form__colores__previewColor;
+            background-color: $rosa;
+        }
+
+        .form__colores__setColores{
+            @extend .row;
+            @extend .mb-2;
+
+            .form__colores__setColores__color{
+                @extend .m-3;
+                height: 25px;
+                width: 25px;
+                border-radius: 100%;
+                cursor: pointer;
+            }
+            .form__colores__setColores__color:hover{
+                box-shadow: 0px 4px 10px rgba(38, 38, 38, 0.2);
+            }
+
+            .form__colores__setColores__color--verde{
+                @extend .form__colores__setColores__color;
+                background-color: $verde;
+            }
+            .form__colores__setColores__color--naranja{
+                @extend .form__colores__setColores__color;
+                background-color: $naranjaPrincipal;
+            }
+            .form__colores__setColores__color--rojo{
+                @extend .form__colores__setColores__color;
+                background-color: $rojo;
+            }
+            .form__colores__setColores__color--celeste{
+                @extend .form__colores__setColores__color;
+                background-color: $celeste;
+            }
+            .form__colores__setColores__color--azul{
+                @extend .form__colores__setColores__color;
+                background-color: $azul;
+            }
+            .form__colores__setColores__color--amarillo{
+                @extend .form__colores__setColores__color;
+                background-color: $amarillo;
+            }
+            .form__colores__setColores__color--rosa{
+                @extend .form__colores__setColores__color;
+                background-color: $rosa;
+            }
+            .form__colores__setColores__color--violeta{
+                @extend .form__colores__setColores__color;
+                background-color: $violeta;
+            }
+        }
+    }
+}
+
+@media(max-width: 768px){
+    .form__objetivo__grid__col__p{
+        margin-top: 20px;
+    }
+}
+
+.checkListGirl{
+    @extend .mx-auto;
+    @extend .p-0;
+    @extend .text-center;
+    
+    .checkListGirl__img{
+        @extend .img-fluid;
+    }
+}
+
+.questionModal{
+    @extend .modal;
+    @extend .fade;
+
+    .tituloModal{
+        @extend .modal-title;
+        font-family: $fuentePrincipal;
+    }
+
+    .bodyModal{
+        @extend .modal-body;
+        font-family: $fuentePrincipal;
+    }
+
+    #addAnotherHabit{
+        @extend .my-2;
+        @extend .mx-3;
+        @extend .my-sm-0;
+        @extend .py-1;
+        @extend .rounded;
+        background-color: $blanco;
+        border-width: 1px;
+        border-color: $naranjaPrincipal;
+        border-style: solid;
+        color: $naranjaPrincipal;  
+    }
+    #addAnotherHabit:hover{
+        @extend .my-2;
+        @extend .mx-3;
+        @extend .my-sm-0;
+        @extend .py-1;
+        background-color: $naranjaPrincipal;
+        border-width: 1px;
+        border-color: $naranjaPrincipal;
+        color: $blanco;
+    }
+    #takeMeHome{
+        @extend .my-2;
+        @extend .my-sm-0;
+        @extend .mx-3;
+        @extend .py-1;
+        @extend .rounded;
+        background-color: $blanco;
+        border-width: 1px;
+        border-color: $gris;
+        border-style: solid;
+        color: $gris;  
+    }
+    #takeMeHome:hover{
+        @extend .my-2;
+        @extend .mx-3;
+        @extend .my-sm-0;
+        @extend .py-1;
+        background-color: $gris;
+        border-width: 1px;
+        border-color: $gris;
+        color: $blanco;
+    }
+}
+
+
+
+
+
+
+
+

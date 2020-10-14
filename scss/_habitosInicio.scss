@@ -1,0 +1,396 @@
+@import "bootstrap-reboot";
+@import "bootstrap";
+@import "bootstrap-grid";
+@import "habitosVariables";
+
+.titulo{
+    @extend .col-lg-8;
+    @extend .mx-auto;
+    @extend .text-center;
+    font-family: $fuentePrincipal;
+}
+
+.bajada{
+    @extend .col-lg-8;
+    @extend .mx-auto;
+    @extend .mb-4;
+    @extend .text-center;
+    font-family: $fuentePrincipal;
+}
+
+.semana{
+    @extend .row;
+    @extend .col-lg-8;
+    @extend .mx-auto;
+    @extend .justify-content-center;
+
+    .semana__dia{
+        @extend .mx-2;
+        @extend .my-2;
+        @extend .p-0;
+        @extend .rounded;
+        font-family: $fuentePrincipal;
+        background-color: $grisClaro;
+    }
+
+    .semana__dia-activo{
+        @extend .semana__dia;
+        background-color: $naranjaPrincipal;
+        color: $blanco;
+        box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    }
+
+    .semana__dia__num{
+        @extend .m-0;
+        @extend .pt-2;
+        @extend .text-center;
+        width: 50px;
+        height: 35px;
+    }
+    .semana__dia__letra{
+        @extend .m-0;
+        @extend .text-center;
+        width: 50px;
+        height: 35px;
+    }
+    
+}
+
+.misHabitos{
+    @extend .col-lg-8;
+    @extend .my-4;
+    @extend .mx-auto;
+    @extend .justify-content-center;
+    font-family: $fuentePrincipal;
+
+    .misHabitos__divHabito{
+        @extend .col-lg-6;
+        @extend .mx-auto;
+        @extend .my-4;
+        @extend .py-2;
+        @extend .rounded;
+        background-color: $grisClaro;
+        box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+        transition: all .3s ease-in;
+
+        p{
+            @extend .my-1;
+        }
+
+        .go-corner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            overflow: hidden;
+            top: 0;
+            right: 0;
+            border-radius: 0 4px 0 32px;
+            cursor: pointer;
+        }
+
+        .delete-corner{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            width: 39px;
+            height: 38px;
+            overflow: hidden;
+            bottom: 0;
+            right: 0;
+            border-radius: 32px 0px 4px 0px;
+            cursor: pointer;
+        }
+
+        .showToggle{
+            display: none;
+        }
+
+        &:hover {
+            clip-path: circle(75%);
+        }
+
+        .prompt{
+            @extend .my-3;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+
+    .misHabitos__divHabito--naranja{
+        @extend .misHabitos__divHabito;
+        .go-corner{
+            background-color: $naranjaPrincipal;
+            .material-icons{
+                color: $blanco;
+            }
+        }
+        .delete-corner{
+            background-color: $naranjaPrincipal;
+            .material-icons{
+                color: $blanco
+            }
+        }
+        &:hover {
+            background: $naranjaPrincipal; 
+            color: $blanco;
+        }
+    }
+
+    .misHabitos__divHabito--verde{
+        @extend .misHabitos__divHabito;
+        .go-corner{
+            background-color: $verde; 
+        }
+        .delete-corner{
+            background-color: $verde;
+        }
+        &:hover {
+            background: $verde; 
+        }
+    }
+
+    .misHabitos__divHabito--rojo{
+        @extend .misHabitos__divHabito;
+        .go-corner{
+            background-color: $rojo; 
+            .material-icons{
+                color: $blanco; 
+            }
+        }
+        .delete-corner{
+            background-color: $rojo;
+            .material-icons{
+                color: $blanco
+            }
+        }
+        &:hover {
+            background: $rojo; 
+            color: $blanco;
+        }
+    }
+
+    .misHabitos__divHabito--celeste{
+        @extend .misHabitos__divHabito;     
+        .go-corner{
+            background-color: $celeste;
+        }
+        .delete-corner{
+            background-color: $celeste;
+        }
+        &:hover {
+            background: $celeste; 
+        }
+    }
+
+    .misHabitos__divHabito--azul{
+        @extend .misHabitos__divHabito;
+        .go-corner{
+            background-color: $azul;
+            .material-icons{
+                color: $blanco; 
+            }
+        }
+        .delete-corner{
+            background-color: $azul;
+            .material-icons{
+                color: $blanco
+            }
+        }
+        &:hover {
+            background: $azul; 
+            color: $blanco;
+        }
+    }
+
+    .misHabitos__divHabito--amarillo{
+        @extend .misHabitos__divHabito;               
+        .go-corner{
+            background-color: $amarillo; 
+        }
+        .delete-corner{
+            background-color: $amarillo;
+        }
+        &:hover {
+            background: $amarillo; 
+        }
+    }
+
+    .misHabitos__divHabito--violeta{
+        @extend .misHabitos__divHabito;
+        .go-corner{
+            background-color: $violeta; 
+            .material-icons{
+                color: $blanco; 
+            }
+        }
+        .delete-corner{
+            background-color: $violeta;
+            .material-icons{
+                color: $blanco
+            }
+        }
+        &:hover {
+            background: $violeta; 
+            color: $blanco;
+        }
+    }
+
+    .misHabitos__divHabito--rosa{
+        @extend .misHabitos__divHabito;                       
+        .go-corner{
+            background-color: $rosa; 
+        }
+        .delete-corner{
+            background-color: $rosa;
+        }
+        &:hover {
+            background: $rosa; 
+        }
+    }
+}   
+
+.calendarBoy{
+    @extend .align-self-end;
+    @extend .justify-content-center;
+    @extend .p-0;
+
+    .calendarBoy__img{
+        @extend .img-fluid;
+    }
+}
+
+@media(max-width: 768px){
+    .calendarBoy{
+        text-align: center;
+    }
+}
+
+
+
+.noHabitsContainer{
+    @extend .container;
+    @extend .row;
+    @extend .mx-auto;
+    @extend .my-4;
+    @extend .justify-content-center;
+    font-family: $fuentePrincipal;
+
+    .noHabitsContainer__h3{
+        @extend .col-lg-12;
+        @extend .mx-auto;
+        @extend .my-4;
+        @extend .text-center; 
+    }
+
+    .noHabitsContainer__texto{
+        @extend .col-lg-6;
+
+        .noHabitsContainer__p{
+            @extend .mx-auto;
+            @extend .mt-5;
+    
+            .noHabitsContainer__p__a{
+                color: $naranjaPrincipal;
+                text-decoration: underline;
+            }
+        }
+        
+    }
+    .noHabitsContainer__img{
+        @extend .col-lg-4;
+    }
+
+}
+
+.showToggle{
+    display: none;
+}
+
+.deleteModal{
+    font-family: $fuentePrincipal;
+    @extend .modal;
+    @extend .fade;
+
+    .modals__buttons{
+        @extend .my-2;
+        @extend .mx-3;
+        @extend .my-sm-0;
+        @extend .py-1;
+        @extend .rounded;
+        background-color: $blanco;
+        border-width: 1px;
+        border-color: $naranjaPrincipal;
+        border-style: solid;
+        color: $naranjaPrincipal; 
+        font-family: $fuentePrincipal;
+    }
+
+    .modals__buttons:hover{
+        @extend .my-2;
+        @extend .mx-3;
+        @extend .my-sm-0;
+        @extend .py-1;
+        background-color: $naranjaPrincipal;
+        border-width: 1px;
+        border-color: $naranjaPrincipal;
+        color: $blanco;
+        font-family: $fuentePrincipal;
+    }
+}
+
+.updateModal{
+    font-family: $fuentePrincipal;
+    @extend .modal;
+    @extend .fade;
+
+    .modals__buttons{
+        @extend .my-2;
+        @extend .mx-3;
+        @extend .my-sm-0;
+        @extend .py-1;
+        @extend .rounded;
+        background-color: $blanco;
+        border-width: 1px;
+        border-color: $naranjaPrincipal;
+        border-style: solid;
+        color: $naranjaPrincipal; 
+        font-family: $fuentePrincipal;
+    }
+
+    .modals__buttons:hover{
+        @extend .my-2;
+        @extend .mx-3;
+        @extend .my-sm-0;
+        @extend .py-1;
+        background-color: $naranjaPrincipal;
+        border-width: 1px;
+        border-color: $naranjaPrincipal;
+        color: $blanco;
+        font-family: $fuentePrincipal;
+    }
+
+    .modal__divPic{
+        @extend .text-center;
+        .modal__divPic__pic{
+            @extend .img-fluid;
+            animation-name: entrar;
+            animation-duration: 2s;
+        }
+    }
+
+    .modal__divText{
+        @extend .text-center;
+        .modal__divText__p{
+            @extend .my-2;
+        }      
+    }
+}
+
+@keyframes entrar{
+    from {opacity: 0%;}
+    to {opacity: 100&;}
+}

@@ -1,0 +1,18 @@
+{
+  "name": "habit-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/main.scss css/estilos.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "author": "Julieta Albertengo",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.29.0",
+    "node-sass": "^4.14.1",
+    "nodemon": "^2.0.4"
+  }
+}

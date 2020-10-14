@@ -1,0 +1,25 @@
+@import "bootstrap-reboot";
+@import "bootstrap";
+@import "bootstrap-grid";
+@import "habitosVariables";
+
+.footer{
+    @extend .container-fluid;
+    @extend .d-flex;
+    @extend .align-items-center;
+    height: 100px;
+    background-color: $grisClaro;
+
+    .footer__p{
+        @extend .col-lg-6;
+        @extend .mx-auto;
+        @extend .m-0;
+        @extend .text-center;
+        font-family: $fuentePrincipal;
+       
+        .footer__p__a{
+            color: black;
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+  <script defer src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <script defer src="https://unpkg.com/moment"></script>
+  <script defer src="addHabit.js"></script>
+  <link rel="stylesheet" href="css/estilos.css" type="text/css" />
+  <title>My Habits: Add a habit</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navegador">
+      <button class="navegador__boton" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+        aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navegador__boton__icono"></span>
+      </button>
+      <a class="navegador__marca" href="index.html">My Habits</a>
+      <div class="navegador__contenedor" id="navbarTogglerDemo03">
+        <ul class="navegador__contenedor__ul">
+          <li class="navegador__contenedor__ul__li">
+            <a class="navegador__contenedor__ul__li__link" href="agregarHabito.html">Add a habit</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <h2 class="titulo">Add a Habit</h2>
+
+    <form class="form" id="add_habit_form">
+      <div class="form__accion">
+        <label class="form__accion__label" for="accion">Name your habit:</label>
+        <input class="form__accion__input" type="text" id="accion" name="accion" required/>
+      </div>
+      <div class="form__objetivo">
+        <p class="form__objetivo__p">Set your goal:</p>
+        <div class="form__objetivo__grid">
+          <div class="form__objetivo__grid__col">
+            <input class="form__objetivo__grid__col__input" type="number" id="cantidad" name="cantidad" required/>
+          </div>
+          <div class="form__objetivo__grid__col">
+            <p class="form__objetivo__grid__col__p">times per</p>
+          </div>
+          <div class="form__objetivo__grid__col">
+            <select class="form__objetivo__grid__col__select" id="periodo" name="periodo">
+              <option value="dia">day</option>
+              <option value="semana">week</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class='form__colores'>
+        <p class='form__colores__p'>Chosen Color:</p>
+        <div class="form__colores__previewColor--default" id='previewDiv'></div>
+        <div class="form__colores__setColores">
+          <div class='form__colores__setColores__color--verde' id="verde"></div>
+          <div class='form__colores__setColores__color--amarillo' id="amarillo"></div>
+          <div class='form__colores__setColores__color--naranja' id="naranja"></div>
+          <div class='form__colores__setColores__color--rojo' id="rojo"></div>
+          <div class='form__colores__setColores__color--celeste' id="celeste"></div>
+          <div class='form__colores__setColores__color--azul' id="azul"></div>
+          <div class='form__colores__setColores__color--violeta' id="violeta"></div>
+          <div class='form__colores__setColores__color--rosa' id="rosa"></div>
+        </div>
+      </div>
+      <div class="form__botones">
+        <button id='submit' type="submit" class="form__botones__guardar">Save</button>
+        <button type="button" id='botonCancelar' class="form__botones__cancelar" id="cancelar">Clear form</button>
+      </div>
+    </form>
+    <div class='checkListGirl'>
+      <img class='checkListGirl__img' src='img/checkListGirl.png'>
+    </div>
+
+    <div class='questionModal' id="questionModal" tabindex="-1" aria-labelledby="questionModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="tituloModal">Amazing!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Do you want to add another habit or go to the homepage?
+          </div>
+          <div class="modal-footer">
+            <button type="button" id='addAnotherHabit'>Add another habit</button>
+            <button type="button" id='takeMeHome'>Take me home</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <p class="footer__p">Developed by <a href="https://www.linkedin.com/in/julieta-albertengo/" class="footer__p__a">Julieta Albertengo<a></p>
+  </footer>
+</body>
+
+</html>

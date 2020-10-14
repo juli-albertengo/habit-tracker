@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+  <script defer src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <script defer src="https://unpkg.com/moment"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  <script defer src="home.js"></script>
+  <link rel="stylesheet" href="css/estilos.css" type="text/css" />
+  <title>My Habits: Home</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navegador">
+      <button class="navegador__boton" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+        aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navegador__boton__icono"></span>
+      </button>
+      <a class="navegador__marca" href="index.html">My Habits</a>
+      <div class="navegador__contenedor" id="navbarTogglerDemo03">
+        <ul class="navegador__contenedor__ul">
+          <li class="navegador__contenedor__ul__li">
+            <a class="navegador__contenedor__ul__li__link" href="agregarHabito.html">Add a habit</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="titulo">My Habits</h1>
+
+    <div class="semana">
+      <div class="semana__dia">
+        <p class="semana__dia__num" id="1"></p>
+        <p class="semana__dia__letra">M</p>
+      </div>
+      <div class="semana__dia">
+        <p class="semana__dia__num" id="2"></p>
+        <p class="semana__dia__letra">T</p>
+      </div>
+      <div class="semana__dia">
+        <p class="semana__dia__num" id="3"></p>
+        <p class="semana__dia__letra">W</p>
+      </div>
+      <div class="semana__dia">
+        <p class="semana__dia__num" id="4"></p>
+        <p class="semana__dia__letra">T</p>
+      </div>
+      <div class="semana__dia">
+        <p class="semana__dia__num" id="5"></p>
+        <p class="semana__dia__letra">F</p>
+      </div>
+      <div class="semana__dia">
+        <p class="semana__dia__num" id="6"></p>
+        <p class="semana__dia__letra">S</p>
+      </div>
+      <div class="semana__dia">
+        <p class="semana__dia__num" id="7"></p>
+        <p class="semana__dia__letra">S</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="misHabitos">
+      </div>
+      <div class='calendarBoy'>
+        <img class='calendarBoy__img' src='img/calendarBoy.png'>
+      </div>
+    </div>
+    
+    <div id='noHabits' class='showToggle'>
+      <h2 class='noHabitsContainer__h3'>Hello there! Welcome to My Habits.</h2>
+      <div class="noHabitsContainer__texto">
+        <h4 class='noHabitsContainer__p'>We are here to help you keep track of the habits you want to incorporate into your daily life.</h4>
+        <h4 class='noHabitsContainer__p'>Go to <a class='noHabitsContainer__p__a' href='agregarHabito.html'>add a habit</a> to get started!</h4>
+      </div>
+      <div class="noHabitsContainer__imagen">
+        <img src='img/getStarted.gif'>  
+      </div>
+    </div>
+
+    <div class='showToggle' id="deleteModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="tituloModal">The habit has been deleted</h5>
+            <button id='deleteModalButton' class='modals__buttons' type="button"  data-dismiss="modal" aria-label="Close">
+              Ok
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class='showToggle' id="updateModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="tituloModal">Congrats!</h5>
+            <button id='updateModalButton' class='modals__buttons' type="button"  data-dismiss="modal" aria-label="Close">
+              Ok
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class='modal__divPic'>
+              <img class='modal__divPic__pic' id='fueguito' src="img/fuego.png">
+            </div>
+            <div class='modal__divText'>
+              <p class='modal__divText__p'>The habit has been updated</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <p class="footer__p">Developed by <a href="https://www.linkedin.com/in/julieta-albertengo/" class="footer__p__a">Julieta Albertengo<a></p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+@import "bootstrap-reboot";
+@import "bootstrap";
+@import "bootstrap-grid";
+@import "habitosVariables";
+
+.navegador{
+    @extend .navbar;
+    @extend .navbar-light;
+    @extend .navbar-expand-lg;
+    @extend .mb-5;
+    box-shadow: 10px 10px 5px -6px rgba(212,212,212,1);
+
+    .navegador__boton{
+        @extend .navbar-toggler;
+
+        .navegador__boton__icono{
+            @extend .navbar-toggler-icon;
+        }
+    }
+
+    .navegador__marca{
+        @extend .navbar-brand;
+        @extend .mx-4;
+        font-family: $fuentePrincipal;
+        color: $gris;
+    }
+
+    .navegador__contenedor{
+        @extend .collapse;
+        @extend .navbar-collapse;
+
+        .navegador__contenedor__ul{
+            @extend .navbar-nav;
+            @extend .mr-auto;
+            @extend .mt-2;
+            @extend .mt-lg-0;
+
+            .navegador__contenedor__ul__li{
+                @extend .nav-item;
+
+                .navegador__contenedor__ul__li__link{
+                    @extend .nav-link;
+                    padding-left: 15px;
+                    font-family: $fuentePrincipal;
+                    color: $gris;
+                }
+            }
+        }
+    }
+}
